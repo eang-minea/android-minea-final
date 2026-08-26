@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="260dp"
+    android:height="260dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Soft background card -->
+    <path
+        android:fillColor="#FCE4EC"
+        android:pathData="M0,0h200v200H0z"/>
+    <!-- Head / Hair -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M100,32c-12,0 -20,10 -20,22 0,16 10,24 20,24s20,-8 20,-24c0,-12 -8,-22 -20,-22z"/>
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M100,24c-6,0 -11,5 -11,11 0,3 2,6 5,8 4,0 8,0 12,0 3,-2 5,-5 5,-8 0,-6 -5,-11 -11,-11z"/>
+    <!-- Face / Neck -->
+    <path
+        android:fillColor="#FFCCBC"
+        android:pathData="M92,54h16v18h-16z"/>
+    <path
+        android:fillColor="#FFCCBC"
+        android:pathData="M88,44c0,8 5,15 12,15s12,-7 12,-15h-24z"/>
+    <!-- Printed Shirt / Floral Top -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,72l12,-4 18,12 18,-12 12,4 10,24 -14,6 -6,-10v40H90v-40l-6,10 -14,-6z"/>
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M86,84a3,3 0 1,0 0.1,0M112,88a3,3 0 1,0 0.1,0M98,102a3,3 0 1,0 0.1,0M84,116a3,3 0 1,0 0.1,0M116,112a3,3 0 1,0 0.1,0M102,76a3,3 0 1,0 0.1,0"/>
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M89,86a2,2 0 1,0 0.1,0M115,90a2,2 0 1,0 0.1,0M95,104a2,2 0 1,0 0.1,0"/>
+    <!-- Pants / Bottom -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M84,132h32l16,68h-64z"/>
+    <!-- Armchair / Brown Chair -->
+    <path
+        android:fillColor="#A1887F"
+        android:pathData="M48,110c0,-10 6,-18 16,-18h6v68H54c-3.3,0 -6,-2.7 -6,-6v-44zM130,92h6c10,0 16,8 16,18v44c0,3.3 -2.7,6 -6,6h-16V92z"/>
+    <!-- Arms -->
+    <path
+        android:fillColor="#FFCCBC"
+        android:pathData="M66,96c4,12 8,24 6,36 -2,3 -6,4 -10,2 -2,-4 -1,-14 0,-24l4,-14zM134,96c-4,12 -8,24 -6,36 2,3 6,4 10,2 2,-4 1,-14 0,-24l-4,-14z"/>
+</vector>

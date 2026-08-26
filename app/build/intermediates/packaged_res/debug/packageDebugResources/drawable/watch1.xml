@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="260dp"
+    android:height="260dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Warm skin/arm backdrop -->
+    <path
+        android:fillColor="#FFE0B2"
+        android:pathData="M0,0h200v200H0z"/>
+    <!-- Arm / Wrist diagonal -->
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M30,0L170,200H200L60,0z"/>
+    <!-- Watch Strap (White leather strap) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,30l60,140 -20,8 -60,-140z"/>
+    <!-- Watch Dial Gold Outer Ring -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M100,100m-36,0a36,36 0 1,0 72,0a36,36 0 1,0 -72,0"/>
+    <!-- Watch Dial White Face -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,100m-30,0a30,30 0 1,0 60,0a30,30 0 1,0 -60,0"/>
+    <!-- Watch Dial Center & Hands -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M100,100m-4,0a4,4 0 1,0 8,0a4,4 0 1,0 -8,0"/>
+    <path
+        android:fillColor="#37474F"
+        android:strokeColor="#37474F"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M100,100L100,78M100,100L116,108"/>
+    <!-- Gold Bangle / Accessory next to watch -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFB300"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:pathData="M80,140c15,15 35,20 50,12"/>
+</vector>

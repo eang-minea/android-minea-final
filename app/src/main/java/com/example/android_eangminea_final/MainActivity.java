@@ -1,0 +1,203 @@
+package com.example.android_eangminea_final;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.widget.ImageViewCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerViewCategories;
+    private CategoryAdapter categoryAdapter;
+    private List<Category> categoryList;
+
+    private RecyclerView recyclerViewProducts;
+    private ProductAdapter productAdapter;
+    private List<Product> allProducts;
+    private List<Product> displayedProducts;
+
+    private EditText edtSearch;
+    private ImageView btnMenu, btnFilter;
+    private TextView btnSeeAllCategories;
+
+    // Bottom Navigation items
+    private ImageView imgNavHome, imgNavCart, imgNavFavorite, imgNavMore;
+    private TextView txtNavHome, txtNavCart, txtNavFavorite, txtNavMore;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        setupWindowInsets();
+        initViews();
+        setupCategories();
+        setupProducts();
+        setupSearch();
+        setupBottomNav();
+    }
+
+    private void setupWindowInsets() {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainRoot), (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, 0);
+            findViewById(R.id.layoutBottomNav).setPadding(0, 0, 0, insets.bottom);
+            return windowInsets;
+        });
+    }
+
+    private void initViews() {
+        recyclerViewCategories = findViewById(R.id.recyclerViewCategories);
+        recyclerViewProducts = findViewById(R.id.recyclerViewProducts);
+        edtSearch = findViewById(R.id.edtSearch);
+        btnMenu = findViewById(R.id.btnMenu);
+        btnFilter = findViewById(R.id.btnFilter);
+        btnSeeAllCategories = findViewById(R.id.btnSeeAllCategories);
+
+        imgNavHome = findViewById(R.id.imgNavHome);
+        imgNavCart = findViewById(R.id.imgNavCart);
+        imgNavFavorite = findViewById(R.id.imgNavFavorite);
+        imgNavMore = findViewById(R.id.imgNavMore);
+
+        txtNavHome = findViewById(R.id.txtNavHome);
+        txtNavCart = findViewById(R.id.txtNavCart);
+        txtNavFavorite = findViewById(R.id.txtNavFavorite);
+        txtNavMore = findViewById(R.id.txtNavMore);
+
+        btnMenu.setOnClickListener(v -> Toast.makeText(this, "Menu clicked", Toast.LENGTH_SHORT).show());
+        btnFilter.setOnClickListener(v -> Toast.makeText(this, "Filter clicked", Toast.LENGTH_SHORT).show());
+        btnSeeAllCategories.setOnClickListener(v -> Toast.makeText(this, "All Categories", Toast.LENGTH_SHORT).show());
+    }
+
+    private void setupCategories() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category("Apparel", R.drawable.ic_cat_apparel, true));
+        categoryList.add(new Category("Shoe", R.drawable.ic_cat_shoe, false));
+        categoryList.add(new Category("Beauty", R.drawable.ic_cat_beauty, false));
+        categoryList.add(new Category("Electric", R.drawable.ic_cat_electric, false));
+
+        recyclerViewCategories.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        categoryAdapter = new CategoryAdapter(categoryList, (category, position) -> {
+            Toast.makeText(MainActivity.this, category.getName() + " selected", Toast.LENGTH_SHORT).show();
+        });
+        recyclerViewCategories.setAdapter(categoryAdapter);
+    }
+
+    private void setupProducts() {
+        allProducts = buildProductList();
+        displayedProducts = new ArrayList<>(allProducts);
+
+        recyclerViewProducts.setLayoutManager(new LinearLayoutManager(this));
+        productAdapter = new ProductAdapter(displayedProducts, product -> {
+            Intent intent = new Intent(MainActivity.this, ProductDetailActivity.class);
+            intent.putExtra("product", product);
+            startActivity(intent);
+        });
+        recyclerViewProducts.setAdapter(productAdapter);
+    }
+
+    private List<Product> buildProductList() {
+        List<Product> list = new ArrayList<>();
+
+        list.add(new Product(
+                Arrays.asList(R.drawable.shirt1, R.drawable.shirt2, R.drawable.watch1),
+                "Cotton Shirt",
+                "This is 100% cotton shirt which is made by Bangladesh",
+                "$150",
+                "$112"
+        ));
+
+        list.add(new Product(
+                Arrays.asList(R.drawable.watch1, R.drawable.shirt1, R.drawable.shirt2),
+                "Ladies Watch",
+                "This is 100% cotton shirt which is made by Bangladesh",
+                "$150",
+                "$112"
+        ));
+
+        list.add(new Product(
+                Arrays.asList(R.drawable.shirt2, R.drawable.shirt1, R.drawable.watch1),
+                "Cotton Shirt",
+                "This is 100% cotton shirt which is made by Bangladesh",
+                "$150",
+                "$112"
+        ));
+
+        return list;
+    }
+
+    private void setupSearch() {
+        edtSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                filterProducts(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+    }
+
+    private void filterProducts(String query) {
+        displayedProducts.clear();
+        if (query.trim().isEmpty()) {
+            displayedProducts.addAll(allProducts);
+        } else {
+            String lower = query.toLowerCase();
+            for (Product p : allProducts) {
+                if (p.getTitle().toLowerCase().contains(lower) || p.getDescription().toLowerCase().contains(lower)) {
+                    displayedProducts.add(p);
+                }
+            }
+        }
+        productAdapter.notifyDataSetChanged();
+    }
+
+    private void setupBottomNav() {
+        findViewById(R.id.navHome).setOnClickListener(v -> selectNavTab(0));
+        findViewById(R.id.navCart).setOnClickListener(v -> selectNavTab(1));
+        findViewById(R.id.navFavorite).setOnClickListener(v -> selectNavTab(2));
+        findViewById(R.id.navMore).setOnClickListener(v -> selectNavTab(3));
+    }
+
+    private void selectNavTab(int index) {
+        int colorSelected = ContextCompat.getColor(this, R.color.primary_coral);
+        int colorUnselected = ContextCompat.getColor(this, R.color.icon_unselected);
+
+        ImageViewCompat.setImageTintList(imgNavHome, android.content.res.ColorStateList.valueOf(index == 0 ? colorSelected : colorUnselected));
+        txtNavHome.setTextColor(index == 0 ? colorSelected : colorUnselected);
+        txtNavHome.setTypeface(null, index == 0 ? android.graphics.Typeface.BOLD : android.graphics.Typeface.NORMAL);
+
+        ImageViewCompat.setImageTintList(imgNavCart, android.content.res.ColorStateList.valueOf(index == 1 ? colorSelected : colorUnselected));
+        txtNavCart.setTextColor(index == 1 ? colorSelected : colorUnselected);
+        txtNavCart.setTypeface(null, index == 1 ? android.graphics.Typeface.BOLD : android.graphics.Typeface.NORMAL);
+
+        ImageViewCompat.setImageTintList(imgNavFavorite, android.content.res.ColorStateList.valueOf(index == 2 ? colorSelected : colorUnselected));
+        txtNavFavorite.setTextColor(index == 2 ? colorSelected : colorUnselected);
+        txtNavFavorite.setTypeface(null, index == 2 ? android.graphics.Typeface.BOLD : android.graphics.Typeface.NORMAL);
+
+        ImageViewCompat.setImageTintList(imgNavMore, android.content.res.ColorStateList.valueOf(index == 3 ? colorSelected : colorUnselected));
+        txtNavMore.setTextColor(index == 3 ? colorSelected : colorUnselected);
+        txtNavMore.setTypeface(null, index == 3 ? android.graphics.Typeface.BOLD : android.graphics.Typeface.NORMAL);
+    }
+}
