@@ -8,6 +8,8 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="35" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
         android:name="com.example.android_eangminea_final.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -24,7 +26,8 @@
         android:roundIcon="@android:drawable/sym_def_app_icon"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.AndroidMineaFinal" >
+        android:theme="@style/Theme.AndroidMineaFinal"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.example.android_eangminea_final.MainActivity"
             android:exported="true" >

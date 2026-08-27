@@ -11,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
@@ -71,7 +74,17 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         }
 
         public void bind(Product product, OnProductClickListener listener) {
-            imgProduct.setImageResource(product.getMainImage());
+            // Load image: use Glide for remote URLs, fallback to local drawable
+            if (product.hasRemoteImages()) {
+                Glide.with(itemView.getContext())
+                        .load(product.getThumbnailUrl())
+                        .transition(DrawableTransitionOptions.withCrossFade())
+                        .centerCrop()
+                        .into(imgProduct);
+            } else {
+                imgProduct.setImageResource(product.getMainImage());
+            }
+
             txtProductTitle.setText(product.getTitle());
             txtProductDescription.setText(product.getDescription());
             txtDiscountedPrice.setText(product.getDiscountedPrice());

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.android_eangminea_final.app-mergeDebugResources-30:/values-eu/values-eu.xml",
+            "outputFile": "com.example.android_eangminea_final.app-mergeDebugResources-32:/values-eu/values-eu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\8.11.1\\transforms\\669202d29b16b7d56e852d5167ee1fd9\\transformed\\core-1.13.0\\res\\values-eu\\values-eu.xml",

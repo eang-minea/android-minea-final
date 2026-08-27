@@ -46,108 +46,138 @@
 
     </RelativeLayout>
 
-    <!-- Scrollable Content -->
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
+    <!-- Swipe to Refresh wrapper -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:fillViewport="true"
         app:layout_constraintTop_toBottomOf="@id/layoutTopBar"
         app:layout_constraintBottom_toTopOf="@id/layoutBottomNav">
 
-        <LinearLayout
+        <!-- Scrollable Content -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="16dp">
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-            <!-- Search Bar -->
             <LinearLayout
-                android:id="@+id/layoutSearch"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_search_bar"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_search" />
+                <!-- Search Bar -->
+                <LinearLayout
+                    android:id="@+id/layoutSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_bar"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
 
-                <EditText
-                    android:id="@+id/edtSearch"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_marginStart="10dp"
-                    android:background="@null"
-                    android:hint="Search Your Product"
-                    android:textColor="@color/text_dark"
-                    android:textColorHint="@color/text_subtitle"
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_search" />
+
+                    <EditText
+                        android:id="@+id/edtSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        android:hint="Search Your Product"
+                        android:textColor="@color/text_dark"
+                        android:textColorHint="@color/text_subtitle"
+                        android:textSize="14sp"
+                        android:singleLine="true"
+                        android:imeOptions="actionSearch" />
+
+                </LinearLayout>
+
+                <!-- Category Header -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/btnSeeAllCategories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="See All"
+                        android:textColor="@color/text_subtitle"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+                <!-- Categories Horizontal RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:clipToPadding="false"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_category" />
+
+                <!-- Loading Indicator -->
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="32dp"
+                    android:visibility="gone" />
+
+                <!-- Error / Empty State -->
+                <TextView
+                    android:id="@+id/txtError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:textColor="@color/text_subtitle"
                     android:textSize="14sp"
-                    android:singleLine="true"
-                    android:imeOptions="actionSearch" />
+                    android:visibility="gone" />
+
+                <!-- Products Vertical RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_product" />
 
             </LinearLayout>
 
-            <!-- Category Header -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp">
+        </androidx.core.widget.NestedScrollView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Category"
-                    android:textColor="@color/text_dark"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/btnSeeAllCategories"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:text="See All"
-                    android:textColor="@color/text_subtitle"
-                    android:textSize="13sp" />
-
-            </RelativeLayout>
-
-            <!-- Categories Horizontal RecyclerView -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewCategories"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:clipToPadding="false"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_category" />
-
-            <!-- Products Vertical RecyclerView -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewProducts"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:nestedScrollingEnabled="false"
-                tools:listitem="@layout/item_product" />
-
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <!-- Bottom Navigation Bar -->
     <LinearLayout

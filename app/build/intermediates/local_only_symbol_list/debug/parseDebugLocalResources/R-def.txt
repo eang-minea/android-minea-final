@@ -88,8 +88,10 @@ id navFavorite
 id navHome
 id navMore
 id nestedScrollView
+id progressBar
 id recyclerViewCategories
 id recyclerViewProducts
+id swipeRefreshLayout
 id txtCategoryName
 id txtDetailDescription
 id txtDetailDiscountPrice
@@ -97,6 +99,7 @@ id txtDetailOriginalPrice
 id txtDetailSubtitle
 id txtDetailTitle
 id txtDiscountedPrice
+id txtError
 id txtHeaderTitle
 id txtNavCart
 id txtNavFavorite

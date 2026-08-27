@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:2:1-27:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\27faa7004f643cc3535e97797d3f7b8f\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\845f6fcb8eb0951589fc95611ddaf515\transformed\constraintlayout-2.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\11cdd15357a546f952068ff08d495e49\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -11,6 +11,8 @@ MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\USER\.gradle\caches\8.
 MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\ed59445d7ae25d98ef8a346f7d42dcaa\transformed\viewpager2-1.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\USER\.gradle\caches\8.11.1\transforms\468352564f19ecfd19cf4f09c3734f19\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\749bf6dbd77c9593446769ce6c36a073\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\08b2bca1201dc4f565550872c574c937\transformed\glide-4.16.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\c6150a7f61a3ef985d98513c7499a794\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\USER\.gradle\caches\8.11.1\transforms\aadcd5b5a92f63c3d9a5513934a9bd20\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.8.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\d6208f4e1140ccaf920468b2d7dfeaac\transformed\activity-1.8.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\83bce696633b7111072274f868712c2b\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
@@ -38,9 +40,11 @@ MERGED from [androidx.core:core:1.13.0] C:\Users\USER\.gradle\caches\8.11.1\tran
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\a7a3d292e60d2646e286f44eff6a1e29\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4e1cb468fe76d767b2bc653bf4d69b80\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\USER\.gradle\caches\8.11.1\transforms\bb9c9df7b6f73016e4b5cad56160a631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4b61cf9167f1b88b897e5747bc951acf\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\0045d4fc7b9a22994945311e6403c1e7\transformed\gifdecoder-4.16.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\USER\.gradle\caches\8.11.1\transforms\6252e70ae38bf34e1607a5576df9ed23\transformed\exifinterface-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\USER\.gradle\caches\8.11.1\transforms\e680c0545b88f16085f39b8c2f92e158\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\2f126e0705602819c2a81cc13b28668e\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4b61cf9167f1b88b897e5747bc951acf\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\22ada24a56cb8b2e175a220064dbc778\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4c725b9b301350756d3bf486eea14b6e\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\d9ab830438b55e6e29f17376adcd4063\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -54,9 +58,13 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\USER\.g
 		INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:4:5-22:19
-INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:4:5-22:19
+ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:6:5-25:19
+INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:6:5-25:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\27faa7004f643cc3535e97797d3f7b8f\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\27faa7004f643cc3535e97797d3f7b8f\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\845f6fcb8eb0951589fc95611ddaf515\transformed\constraintlayout-2.2.0\AndroidManifest.xml:7:5-20
@@ -78,39 +86,41 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\USER\.gradle\cache
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\669202d29b16b7d56e852d5167ee1fd9\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:7:9-41
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:8:9-63
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:11:9-63
 	android:icon
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:6:9-58
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:9:9-58
 	android:allowBackup
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:5:9-35
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:10:9-55
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:13:9-55
+	android:usesCleartextTraffic
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:7:9-44
 activity#com.example.android_eangminea_final.MainActivity
-ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:11:9-18:20
+ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:14:9-21:20
 	android:exported
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:13:13-36
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:16:13-36
 	android:name
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:12:13-41
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:15:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:14:13-17:29
+ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:17:13-20:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:15:17-69
+ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:15:25-66
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:19:27-74
 activity#com.example.android_eangminea_final.ProductDetailActivity
-ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:19:9-21:40
+ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:22:9-24:40
 	android:exported
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:21:13-37
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:20:13-50
+		ADDED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml:23:13-50
 uses-sdk
 INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\USER\Desktop\android-minea-final\app\src\main\AndroidManifest.xml
@@ -129,6 +139,10 @@ MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\USER\.gradle\cac
 MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\USER\.gradle\caches\8.11.1\transforms\468352564f19ecfd19cf4f09c3734f19\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\749bf6dbd77c9593446769ce6c36a073\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\749bf6dbd77c9593446769ce6c36a073\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\08b2bca1201dc4f565550872c574c937\transformed\glide-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\08b2bca1201dc4f565550872c574c937\transformed\glide-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\c6150a7f61a3ef985d98513c7499a794\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\c6150a7f61a3ef985d98513c7499a794\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\USER\.gradle\caches\8.11.1\transforms\aadcd5b5a92f63c3d9a5513934a9bd20\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\USER\.gradle\caches\8.11.1\transforms\aadcd5b5a92f63c3d9a5513934a9bd20\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.8.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\d6208f4e1140ccaf920468b2d7dfeaac\transformed\activity-1.8.0\AndroidManifest.xml:20:5-44
@@ -183,12 +197,16 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\USER\.gr
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4e1cb468fe76d767b2bc653bf4d69b80\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\USER\.gradle\caches\8.11.1\transforms\bb9c9df7b6f73016e4b5cad56160a631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\USER\.gradle\caches\8.11.1\transforms\bb9c9df7b6f73016e4b5cad56160a631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4b61cf9167f1b88b897e5747bc951acf\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4b61cf9167f1b88b897e5747bc951acf\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\0045d4fc7b9a22994945311e6403c1e7\transformed\gifdecoder-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\0045d4fc7b9a22994945311e6403c1e7\transformed\gifdecoder-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\USER\.gradle\caches\8.11.1\transforms\6252e70ae38bf34e1607a5576df9ed23\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\USER\.gradle\caches\8.11.1\transforms\6252e70ae38bf34e1607a5576df9ed23\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\USER\.gradle\caches\8.11.1\transforms\e680c0545b88f16085f39b8c2f92e158\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\USER\.gradle\caches\8.11.1\transforms\e680c0545b88f16085f39b8c2f92e158\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\2f126e0705602819c2a81cc13b28668e\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\2f126e0705602819c2a81cc13b28668e\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4b61cf9167f1b88b897e5747bc951acf\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4b61cf9167f1b88b897e5747bc951acf\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\22ada24a56cb8b2e175a220064dbc778\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\22ada24a56cb8b2e175a220064dbc778\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\USER\.gradle\caches\8.11.1\transforms\4c725b9b301350756d3bf486eea14b6e\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44

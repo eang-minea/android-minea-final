@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,12 +19,19 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.core.widget.ImageViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final int PAGE_SIZE = 20;
 
     private RecyclerView recyclerViewCategories;
     private CategoryAdapter categoryAdapter;
@@ -36,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
     private EditText edtSearch;
     private ImageView btnMenu, btnFilter;
     private TextView btnSeeAllCategories;
+    private ProgressBar progressBar;
+    private TextView txtError;
+    private SwipeRefreshLayout swipeRefreshLayout;
+
+    // Pagination state
+    private int currentSkip = 0;
+    private int totalProducts = 0;
+    private boolean isLoading = false;
 
     // Bottom Navigation items
     private ImageView imgNavHome, imgNavCart, imgNavFavorite, imgNavMore;
@@ -52,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         setupProducts();
         setupSearch();
         setupBottomNav();
+        setupSwipeRefresh();
     }
 
     private void setupWindowInsets() {
@@ -70,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
         btnMenu = findViewById(R.id.btnMenu);
         btnFilter = findViewById(R.id.btnFilter);
         btnSeeAllCategories = findViewById(R.id.btnSeeAllCategories);
+        progressBar = findViewById(R.id.progressBar);
+        txtError = findViewById(R.id.txtError);
+        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
 
         imgNavHome = findViewById(R.id.imgNavHome);
         imgNavCart = findViewById(R.id.imgNavCart);
@@ -101,8 +122,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupProducts() {
-        allProducts = buildProductList();
-        displayedProducts = new ArrayList<>(allProducts);
+        allProducts = new ArrayList<>();
+        displayedProducts = new ArrayList<>();
 
         recyclerViewProducts.setLayoutManager(new LinearLayoutManager(this));
         productAdapter = new ProductAdapter(displayedProducts, product -> {
@@ -111,36 +132,137 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         recyclerViewProducts.setAdapter(productAdapter);
+
+        // Fetch first page of products from DummyJSON API
+        fetchProductsFromApi(false);
     }
 
-    private List<Product> buildProductList() {
-        List<Product> list = new ArrayList<>();
+    private void setupSwipeRefresh() {
+        swipeRefreshLayout.setColorSchemeResources(
+                R.color.primary_coral
+        );
 
-        list.add(new Product(
-                Arrays.asList(R.drawable.shirt1, R.drawable.shirt2, R.drawable.watch1),
-                "Cotton Shirt",
-                "This is 100% cotton shirt which is made by Bangladesh",
-                "$150",
-                "$112"
-        ));
+        swipeRefreshLayout.setOnRefreshListener(() -> {
+            if (isLoading) {
+                swipeRefreshLayout.setRefreshing(false);
+                return;
+            }
 
-        list.add(new Product(
-                Arrays.asList(R.drawable.watch1, R.drawable.shirt1, R.drawable.shirt2),
-                "Ladies Watch",
-                "This is 100% cotton shirt which is made by Bangladesh",
-                "$150",
-                "$112"
-        ));
+            if (currentSkip >= totalProducts && totalProducts > 0) {
+                // All products have been loaded
+                swipeRefreshLayout.setRefreshing(false);
+                Toast.makeText(this, "All products loaded (" + totalProducts + " total)", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-        list.add(new Product(
-                Arrays.asList(R.drawable.shirt2, R.drawable.shirt1, R.drawable.watch1),
-                "Cotton Shirt",
-                "This is 100% cotton shirt which is made by Bangladesh",
-                "$150",
-                "$112"
-        ));
+            // Load next 20 products
+            fetchProductsFromApi(true);
+        });
+    }
 
-        return list;
+    /**
+     * Fetch products from the DummyJSON API.
+     * @param isLoadMore true = append next page; false = initial load (clear existing)
+     */
+    private void fetchProductsFromApi(boolean isLoadMore) {
+        if (isLoading) return;
+        isLoading = true;
+
+        if (!isLoadMore) {
+            // Initial load: show progress bar, reset pagination
+            progressBar.setVisibility(View.VISIBLE);
+            recyclerViewProducts.setVisibility(View.GONE);
+            txtError.setVisibility(View.GONE);
+            currentSkip = 0;
+            allProducts.clear();
+            displayedProducts.clear();
+            productAdapter.notifyDataSetChanged();
+        }
+
+        DummyJsonApi api = RetrofitClient.getApi();
+        api.getProducts(PAGE_SIZE, currentSkip).enqueue(new Callback<ProductResponse>() {
+            @Override
+            public void onResponse(Call<ProductResponse> call, Response<ProductResponse> response) {
+                isLoading = false;
+                progressBar.setVisibility(View.GONE);
+                swipeRefreshLayout.setRefreshing(false);
+
+                if (response.isSuccessful() && response.body() != null) {
+                    ProductResponse body = response.body();
+                    totalProducts = body.getTotal();
+                    List<ApiProduct> apiProducts = body.getProducts();
+
+                    int insertStart = allProducts.size();
+
+                    for (ApiProduct apiProduct : apiProducts) {
+                        double originalPrice = apiProduct.getPrice();
+                        double discountedPrice = apiProduct.getDiscountedPrice();
+
+                        String originalPriceStr = String.format(Locale.US, "$%.2f", originalPrice);
+                        String discountedPriceStr = String.format(Locale.US, "$%.2f", discountedPrice);
+
+                        Product product = new Product(
+                                apiProduct.getId(),
+                                apiProduct.getTitle(),
+                                apiProduct.getDescription(),
+                                originalPriceStr,
+                                discountedPriceStr,
+                                apiProduct.getThumbnail(),
+                                apiProduct.getImages()
+                        );
+                        allProducts.add(product);
+                    }
+
+                    // Update skip for next page
+                    currentSkip = allProducts.size();
+
+                    // Update displayed list based on current search
+                    String searchQuery = edtSearch.getText().toString().trim();
+                    if (searchQuery.isEmpty()) {
+                        displayedProducts.clear();
+                        displayedProducts.addAll(allProducts);
+                    } else {
+                        filterProducts(searchQuery);
+                    }
+
+                    productAdapter.notifyDataSetChanged();
+                    recyclerViewProducts.setVisibility(View.VISIBLE);
+
+                    if (isLoadMore) {
+                        int loaded = apiProducts.size();
+                        Toast.makeText(MainActivity.this,
+                                "Loaded " + loaded + " more products (" + allProducts.size() + "/" + totalProducts + ")",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    if (!isLoadMore) {
+                        showError("Failed to load products. Pull down to retry.");
+                    } else {
+                        Toast.makeText(MainActivity.this, "Failed to load more products", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ProductResponse> call, Throwable t) {
+                isLoading = false;
+                progressBar.setVisibility(View.GONE);
+                swipeRefreshLayout.setRefreshing(false);
+
+                if (!isLoadMore) {
+                    showError("Network error: " + t.getMessage());
+                } else {
+                    Toast.makeText(MainActivity.this, "Network error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    private void showError(String message) {
+        txtError.setText(message);
+        txtError.setVisibility(View.VISIBLE);
+        recyclerViewProducts.setVisibility(View.GONE);
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
     private void setupSearch() {

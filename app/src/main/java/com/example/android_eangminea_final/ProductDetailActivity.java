@@ -1,5 +1,6 @@
 package com.example.android_eangminea_final;
 
+import android.graphics.Paint;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +25,6 @@ public class ProductDetailActivity extends AppCompatActivity {
 
     private ImageView btnBack;
     private ViewPager2 viewPagerImageSlider;
-    private ImageSliderAdapter sliderAdapter;
     private LinearLayout layoutSliderDots;
 
     private ImageView imgFavoriteHeart;
@@ -40,7 +40,12 @@ public class ProductDetailActivity extends AppCompatActivity {
     private Button btnAddToCart, btnBuyNow;
 
     private boolean isFavorite = true;
+
+    // For local drawable images
     private List<Integer> sliderImages = new ArrayList<>();
+    // For remote URL images
+    private List<String> sliderImageUrls = new ArrayList<>();
+    private boolean isRemoteProduct = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,13 +97,40 @@ public class ProductDetailActivity extends AppCompatActivity {
     private void bindProductData() {
         Product product = (Product) getIntent().getSerializableExtra("product");
         if (product != null) {
-            sliderImages = product.getImages();
+            // Set title and subtitle
             txtDetailTitle.setText(product.getTitle());
-            txtDetailSubtitle.setText("This is 100% " + product.getTitle().toLowerCase());
+            txtDetailSubtitle.setText(product.getDescription());
+
+            // Set prices
             txtDetailDiscountPrice.setText(product.getDiscountedPrice());
             txtDetailOriginalPrice.setText(product.getOriginalPrice());
-            txtDetailDescription.setText(product.getDescription() + " wear shirt which is made by Bangladesh is made by this by Bangladesh dummy text");
+            txtDetailOriginalPrice.setPaintFlags(
+                    txtDetailOriginalPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG
+            );
+
+            // Set description
+            txtDetailDescription.setText(product.getDescription());
+
+            // Determine if this is a remote (API) product or local product
+            if (product.hasRemoteImages()) {
+                isRemoteProduct = true;
+                sliderImageUrls = product.getImageUrls();
+                if (sliderImageUrls == null || sliderImageUrls.isEmpty()) {
+                    // Fallback to thumbnail if no image URLs
+                    sliderImageUrls = new ArrayList<>();
+                    sliderImageUrls.add(product.getThumbnailUrl());
+                }
+
+                // Show stock status from API
+                txtStockStatus.setText("In Stock");
+                txtStockStatus.setVisibility(View.VISIBLE);
+            } else {
+                isRemoteProduct = false;
+                sliderImages = product.getImages();
+                txtStockStatus.setText("5 in a stock");
+            }
         } else {
+            // Fallback default
             sliderImages.add(R.drawable.shirt1);
             sliderImages.add(R.drawable.shirt2);
             sliderImages.add(R.drawable.watch1);
@@ -106,23 +138,33 @@ public class ProductDetailActivity extends AppCompatActivity {
     }
 
     private void setupImageSlider() {
-        sliderAdapter = new ImageSliderAdapter(sliderImages);
-        viewPagerImageSlider.setAdapter(sliderAdapter);
-
-        setupDotsIndicator(0);
+        if (isRemoteProduct) {
+            // Use URL-based adapter for API products
+            ImageSliderAdapter urlAdapter = new ImageSliderAdapter(sliderImageUrls, true);
+            viewPagerImageSlider.setAdapter(urlAdapter);
+            setupDotsIndicator(0, sliderImageUrls.size());
+        } else {
+            // Use drawable-based adapter for local products
+            ImageSliderAdapter resAdapter = new ImageSliderAdapter(sliderImages);
+            viewPagerImageSlider.setAdapter(resAdapter);
+            setupDotsIndicator(0, sliderImages.size());
+        }
 
         viewPagerImageSlider.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                setupDotsIndicator(position);
+                int total = isRemoteProduct
+                        ? (sliderImageUrls != null ? sliderImageUrls.size() : 0)
+                        : (sliderImages != null ? sliderImages.size() : 0);
+                setupDotsIndicator(position, total);
             }
         });
     }
 
-    private void setupDotsIndicator(int activePosition) {
+    private void setupDotsIndicator(int activePosition, int totalDots) {
         layoutSliderDots.removeAllViews();
-        if (sliderImages == null || sliderImages.size() <= 1) return;
+        if (totalDots <= 1) return;
 
         int activeColor = ContextCompat.getColor(this, R.color.primary_coral);
         int inactiveColor = ContextCompat.getColor(this, R.color.border_light);
@@ -131,7 +173,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         int heightPx = (int) (6 * density);
         int marginPx = (int) (3 * density);
 
-        for (int i = 0; i < sliderImages.size(); i++) {
+        for (int i = 0; i < totalDots; i++) {
             View dot = new View(this);
             int widthPx = (i == activePosition) ? (int) (18 * density) : (int) (6 * density);
 

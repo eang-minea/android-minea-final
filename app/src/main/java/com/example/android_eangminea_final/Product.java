@@ -11,6 +11,12 @@ public class Product implements Serializable {
     private String originalPrice;
     private String discountedPrice;
 
+    // Fields for API-sourced products (URL-based images)
+    private String thumbnailUrl;
+    private List<String> imageUrls;
+    private int id;
+
+    // Constructor for local drawable images (existing, backward compatible)
     public Product(List<Integer> images, String title, String description, String originalPrice, String discountedPrice) {
         this.images = images != null ? images : new ArrayList<>();
         this.title = title;
@@ -28,6 +34,23 @@ public class Product implements Serializable {
         this.discountedPrice = discountedPrice;
     }
 
+    // Constructor for API products (URL-based images)
+    public Product(int id, String title, String description, String originalPrice, String discountedPrice,
+                   String thumbnailUrl, List<String> imageUrls) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.originalPrice = originalPrice;
+        this.discountedPrice = discountedPrice;
+        this.thumbnailUrl = thumbnailUrl;
+        this.imageUrls = imageUrls;
+        this.images = new ArrayList<>(); // empty, since we use URLs
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public int getMainImage() {
         if (images != null && !images.isEmpty()) {
             return images.get(0);
@@ -37,6 +60,18 @@ public class Product implements Serializable {
 
     public List<Integer> getImages() {
         return images;
+    }
+
+    public String getThumbnailUrl() {
+        return thumbnailUrl;
+    }
+
+    public List<String> getImageUrls() {
+        return imageUrls;
+    }
+
+    public boolean hasRemoteImages() {
+        return thumbnailUrl != null && !thumbnailUrl.isEmpty();
     }
 
     public String getTitle() {

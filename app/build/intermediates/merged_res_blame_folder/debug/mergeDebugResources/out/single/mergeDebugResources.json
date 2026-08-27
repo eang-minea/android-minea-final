@@ -1,158 +1,150 @@
 [
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\layout_item_category.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\layout\\item_category.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/layout_item_product.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/layout/item_product.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_nav_favorite.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_nav_favorite.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_check_white.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_check_white.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_circle_blue.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\circle_blue.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_nav_home.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_nav_home.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_shirt2.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\shirt2.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_watch1.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/watch1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_cat_beauty.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_cat_beauty.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_swatch_coral.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_swatch_coral.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_cat_electric.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_cat_electric.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_back.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_back.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_nav_cart.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_nav_cart.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_heart_outline.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_heart_outline.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_heart_circle.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_heart_circle.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_circle_green.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/circle_green.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_heart_filled.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_heart_filled.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_heart_filled.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_heart_filled.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_circle_orange.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\circle_orange.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_category_selected.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_category_selected.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_nav_more.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_nav_more.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_cat_shoe.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_cat_shoe.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_btn_cart.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_btn_cart.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_shirt2.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/shirt2.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\layout\\activity_main.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/layout_activity_product_detail.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/layout/activity_product_detail.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_swatch_orange.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_swatch_orange.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_category_unselected.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_category_unselected.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_back.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_back.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_hero_card.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_hero_card.xml"
     },
     {
-        "merged": "com.example.android_eangminea_final.app-debug-32:/layout_activity_main.xml.flat",
-        "source": "com.example.android_eangminea_final.app-main-34:/layout/activity_main.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_circle_orange.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/circle_orange.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\layout_item_product.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\layout\\item_product.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_swatch_orange.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_swatch_orange.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_btn_buy.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_btn_buy.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_nav_favorite.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_nav_favorite.xml"
     },
     {
-        "merged": "com.example.android_eangminea_final.app-debug-32:/layout_activity_product_detail.xml.flat",
-        "source": "com.example.android_eangminea_final.app-main-34:/layout/activity_product_detail.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/layout_item_category.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/layout/item_category.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_category_selected.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_category_selected.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_nav_cart.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_nav_cart.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_heart_outline.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_heart_outline.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_swatch_mint.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_swatch_mint.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\layout_activity_product_detail.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\layout\\activity_product_detail.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_circle_blue.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/circle_blue.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_category_unselected.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_category_unselected.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/layout_activity_main.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_shirt1.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\shirt1.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_btn_buy.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_btn_buy.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_menu.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_menu.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_cat_electric.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_cat_electric.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_search.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_search.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_heart_circle.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_heart_circle.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_nav_home.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_nav_home.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_menu.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_menu.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_cat_shoe.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_cat_shoe.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_product1.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/product1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_search_bar.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_search_bar.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_cat_beauty.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_cat_beauty.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_hero_card.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_hero_card.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/layout_item_slider_image.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/layout/item_slider_image.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_swatch_mint.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_swatch_mint.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_search_bar.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_search_bar.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_watch1.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\watch1.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_search.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_search.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\layout_item_slider_image.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\layout\\item_slider_image.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_bg_btn_cart.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/bg_btn_cart.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_bg_swatch_coral.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\bg_swatch_coral.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_cat_apparel.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_cat_apparel.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_cat_apparel.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_cat_apparel.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_filter.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_filter.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_filter.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_filter.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_shirt1.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/shirt1.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_circle_green.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\circle_green.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_product1.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\product1.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-debug-32:\\drawable_ic_check_white.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.11.1\\com.example.android_eangminea_final.app-main-34:\\drawable\\ic_check_white.xml"
+        "merged": "com.example.android_eangminea_final.app-debug-34:/drawable_ic_nav_more.xml.flat",
+        "source": "com.example.android_eangminea_final.app-main-36:/drawable/ic_nav_more.xml"
     }
 ]
