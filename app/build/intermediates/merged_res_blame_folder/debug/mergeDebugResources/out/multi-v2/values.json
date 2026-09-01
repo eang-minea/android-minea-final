@@ -42,23 +42,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\Desktop\\android-minea-final\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "56",
-                        "endOffsets": "68"
-                    },
-                    "to": {
-                        "startLines": "2007",
-                        "startColumns": "4",
-                        "startOffsets": "132370",
-                        "endColumns": "56",
-                        "endOffsets": "132422"
-                    }
-                },
-                {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\8.11.1\\transforms\\9d5b5ed10266a89ab191bfa888571202\\transformed\\lifecycle-viewmodel-2.6.2\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -131,39 +114,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\Desktop\\android-minea-final\\app\\src\\main\\res\\values\\themes.xml",
+                    "source": "D:\\my-testing\\android-minea-final\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "63",
-                        "endLines": "7",
-                        "endColumns": "12",
-                        "endOffsets": "518"
+                        "startOffsets": "16",
+                        "endColumns": "56",
+                        "endOffsets": "68"
                     },
                     "to": {
-                        "startLines": "6369",
+                        "startLines": "2007",
                         "startColumns": "4",
-                        "startOffsets": "445389",
-                        "endLines": "6375",
-                        "endColumns": "12",
-                        "endOffsets": "445842"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\Desktop\\android-minea-final\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "35,31,30,13,9,11,33,32,22,21,3,4,5,8,10,26,25,27,16,19,20,18,17,12,34",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1321,1140,1093,495,320,406,1237,1187,843,799,91,139,193,276,362,962,916,1009,568,705,749,657,612,448,1281",
-                        "endColumns": "39,46,46,47,41,41,43,49,43,43,47,53,56,43,43,46,45,47,43,43,49,47,44,46,39",
-                        "endOffsets": "1356,1182,1135,538,357,443,1276,1232,882,838,134,188,245,315,401,1004,957,1052,607,744,794,700,652,490,1316"
-                    },
-                    "to": {
-                        "startLines": "643,644,645,646,657,705,708,709,949,950,951,952,953,964,965,970,971,972,977,978,979,980,981,982,985",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "32937,32977,33024,33071,33891,37151,37328,37372,55525,55569,55613,55661,55715,56475,56519,56859,56906,56952,57286,57330,57374,57424,57472,57517,57685",
-                        "endColumns": "39,46,46,47,41,41,43,49,43,43,47,53,56,43,43,46,45,47,43,43,49,47,44,46,39",
-                        "endOffsets": "32972,33019,33066,33114,33928,37188,37367,37417,55564,55608,55656,55710,55767,56514,56558,56901,56947,56995,57325,57369,57419,57467,57512,57559,57720"
+                        "startOffsets": "132370",
+                        "endColumns": "56",
+                        "endOffsets": "132422"
                     }
                 },
                 {
@@ -277,6 +241,25 @@
                     }
                 },
                 {
+                    "source": "D:\\my-testing\\android-minea-final\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "63",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "518"
+                    },
+                    "to": {
+                        "startLines": "6369",
+                        "startColumns": "4",
+                        "startOffsets": "445389",
+                        "endLines": "6375",
+                        "endColumns": "12",
+                        "endOffsets": "445842"
+                    }
+                },
+                {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\8.11.1\\transforms\\6ef021eb25539bc956a6190eccd9de2b\\transformed\\lifecycle-runtime-2.6.2\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -382,6 +365,23 @@
                         "startOffsets": "121823,122971",
                         "endColumns": "53,66",
                         "endOffsets": "121872,123033"
+                    }
+                },
+                {
+                    "source": "D:\\my-testing\\android-minea-final\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "35,31,30,13,9,11,33,32,22,21,3,4,5,8,10,26,25,27,16,19,20,18,17,12,34",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1321,1140,1093,495,320,406,1237,1187,843,799,91,139,193,276,362,962,916,1009,568,705,749,657,612,448,1281",
+                        "endColumns": "39,46,46,47,41,41,43,49,43,43,47,53,56,43,43,46,45,47,43,43,49,47,44,46,39",
+                        "endOffsets": "1356,1182,1135,538,357,443,1276,1232,882,838,134,188,245,315,401,1004,957,1052,607,744,794,700,652,490,1316"
+                    },
+                    "to": {
+                        "startLines": "643,644,645,646,657,705,708,709,949,950,951,952,953,964,965,970,971,972,977,978,979,980,981,982,985",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "32937,32977,33024,33071,33891,37151,37328,37372,55525,55569,55613,55661,55715,56475,56519,56859,56906,56952,57286,57330,57374,57424,57472,57517,57685",
+                        "endColumns": "39,46,46,47,41,41,43,49,43,43,47,53,56,43,43,46,45,47,43,43,49,47,44,46,39",
+                        "endOffsets": "32972,33019,33066,33114,33928,37188,37367,37417,55564,55608,55656,55710,55767,56514,56558,56901,56947,56995,57325,57369,57419,57467,57512,57559,57720"
                     }
                 },
                 {

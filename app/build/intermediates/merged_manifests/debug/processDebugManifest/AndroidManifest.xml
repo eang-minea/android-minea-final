@@ -29,7 +29,7 @@
         android:theme="@style/Theme.AndroidMineaFinal"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.example.android_eangminea_final.MainActivity"
+            android:name="com.example.android_eangminea_final.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +37,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.android_eangminea_final.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.android_eangminea_final.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.android_eangminea_final.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.android_eangminea_final.MainActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.android_eangminea_final.ProductDetailActivity"
             android:exported="false" />

@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-#Thu Aug 27 14:33:16 ICT 2026
-=======
-#Wed Aug 26 18:04:18 ICT 2026
->>>>>>> f49200399cd85f39e794f7444a641dae2f43142b
-base.0=C\:\\Users\\USER\\Desktop\\android-minea-final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\USER\\Desktop\\android-minea-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\USER\\Desktop\\android-minea-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
-base.3=C\:\\Users\\USER\\Desktop\\android-minea-final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Tue Sep 01 14:45:33 ICT 2026
+base.0=D\:\\my-testing\\android-minea-final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=D\:\\my-testing\\android-minea-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=D\:\\my-testing\\android-minea-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.3=D\:\\my-testing\\android-minea-final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=9/classes.dex
